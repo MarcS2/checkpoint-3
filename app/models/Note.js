@@ -19,7 +19,7 @@ export class Note {
   get CurrentActiveNote() {
     return `
       <div class="col-10">
-        <section class="row border border-3 border-light rounded p-3 mt-3">
+        <section class="row border border-3 border-light rounded p-3 mt-3 ">
           <div class="col-5">
             <p class="fs-3 fw-bolder">${this.name} <i class="mdi mdi-pen" style="color: ${this.color};"></i></p>
             <p class="fs-5">Created On: ${this.initialDate.toLocaleString()}</p>
