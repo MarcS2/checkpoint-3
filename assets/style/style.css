@@ -1,1 +1,27 @@
 /* BASIC STYLES HERE */
+
+
+.bgc {
+  background-color: rgb(44, 114, 172);
+  height: 100vh;
+
+}
+
+
+.justify-between {
+  justify-content: space-between;
+}
+
+
+.btn-margin {
+  margin-left: 85%;
+}
+
+
+.posRel {
+  position: relative;
+}
+
+.posAbs {
+  position: absolute;
+}

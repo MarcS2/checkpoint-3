@@ -18,35 +18,89 @@
 <body>
   <!-- SECTION -->
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">checkpoint-3</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <!-- NAVLINKS -->
-          <a href="#/about" class="nav-link">About</a>
-        </div>
-      </div>
-    </nav>
+
   </header>
 
   <!-- SECTION -->
-  <main id="router-view">
+  <main id="router-view ">
+    <!-- SECTION main page -->
     <!-- PRIMARY VIEWPORT -->
+    <div class="offcanvas offcanvas-start text-bg-dark" id="demo">
+      <div class="offcanvas-header">
+        <h1 class="offcanvas-title">Notes:<span>0</span></h1>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div id="note-list" class="ms-3">
+        <!-- <p class="fs-5" role="button">${this.name} <i class="mdi mdi-pen" style="color: ${this.color};"></i></p> -->
+      </div>
+      <div class="offcanvas-body">
+        <form onsubmit="app.NotesController.createNote(event)">
+          <label for="color" class="fs-3 me-4 mb-3">Color selector:</label>
+          <input id="color" type="color" name="color">
+          <label for="name">Name</label>
+          <input class="mb-3" type="text" id="name" name="name" required minlength="3" maxlength="15"
+            placeholder="Notes Name">
+          <button class="btn btn-secondary d-block" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container-fluid bgc">
+      <section class="row justify-between">
+        <div class="col-4">
+          <p class="fs-2 fw-bold">Mind State</p>
+        </div>
+        <div class="col-1">
+          <button class="btn btn-primary ms-5 mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+            <i class="mdi mdi-file-plus fs-3"></i>
+          </button>
+        </div>
+      </section>
+      <section class="row justify-content-evenly" id="active-note">
+
+      </section>
+    </div>
+
+    <!-- !SECTION -->
+    <!-- SECTION active note html -->
+    <!-- <div class="container-fluid bgc">
+      <section class="row justify-between">
+        <div class="col-4">
+          <p class="fs-2 fw-bold">Mind State</p>
+        </div>
+        <div class="col-1">
+          <button class="btn btn-primary ms-5 mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+            <i class="mdi mdi-file-plus fs-3"></i>
+          </button>
+        </div>
+      </section>
+      <section class="row justify-content-evenly">
+        <div class="col-10">
+          <section class="row border border-3 border-light rounded p-3">
+            <div class="col-5">
+              <p class="fs-3 fw-bolder">${this.name} <i class="mdi mdi-pen" style="color: ${this.color};"></i></p>
+              <p class="fs-5">${this.initialDate}</p>
+              <p class="fs-5">${this.updateDate}</p>
+            </div>
+            <div class="col-5">
+              <textarea name="body" id="body" cols="80" rows="30"></textarea>
+            </div>
+            <div class="col-2">
+              <button class="btn btn-danger rounded btn-margin"><i class="mdi mdi-delete"></i></button>
+
+            </div>
+          </section>
+        </div>
+      </section>
+    </div> -->
+
+    <!-- !SECTION -->
+
   </main>
 
   <!-- SECTION -->
   <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
-    </div>
+
   </footer>
 
 
