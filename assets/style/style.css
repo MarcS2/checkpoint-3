@@ -2,7 +2,7 @@
 
 
 .bgc {
-  background-color: rgb(44, 114, 172);
+  background-color: rgb(83, 123, 151);
   height: 100vh;
 
 }
@@ -22,6 +22,22 @@
   position: relative;
 }
 
-.posAbs {
+/* .posAbs {
   position: absolute;
+  right: 85vh;
+  top: 25vh;
+} */
+
+img {
+  margin-top: 15vh;
+  height: 50vh;
+  width: 67vh;
+  border: 6px solid black;
+  border-radius: 50%;
+  object-fit: cover;
+
 }
+
+/* .mainImg {
+  background-image: Url(https://images.unsplash.com/photo-1478641300939-0ec5188d3802?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80);
+} */

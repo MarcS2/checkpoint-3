@@ -1,15 +1,20 @@
 import { AppState } from "../AppState.js"
 import { notesService } from "../services/NotesService.js"
 import { getFormData } from "../utils/FormHandler.js"
+import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
 
 function _drawNotesList() {
   const notes = AppState.notes
-  console.log('Notes List');
+  let totalNotes = 0
+  notes.forEach(note => totalNotes++)
   let content = ''
   notes.forEach(note => content += note.notesList)
   setHTML('note-list', content)
+  setHTML('total-notes', totalNotes)
 }
+
+
 
 
 function _drawActiveNote() {
@@ -49,12 +54,23 @@ export class NotesController {
     }
   }
 
+  async removeNotes(noteId) {
+    const confirm = await Pop.confirm('Would you like to delete this note?')
+
+    if (!confirm) {
+      return
+    }
+
+    notesService.removeNotes(noteId)
+  }
 
   saveNotes(noteId) {
     // @ts-ignore
     let noteContent = document.getElementById('note-content').value
-    console.log(noteContent);
-    notesService.saveNotes(noteId)
+
+    console.log('[NOTES CONTROLLER]note content', noteContent);
+    notesService.saveNotes(noteId, noteContent)
+    Pop.success('Note Saved')
 
   }
 }
