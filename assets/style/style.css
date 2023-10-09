@@ -3,7 +3,8 @@
 
 .bgc {
   background-color: rgb(83, 123, 151);
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 
 }
 
