@@ -26,10 +26,10 @@ export class Note {
             <p class="fs-5">Edited On: ${this.updateDate.toLocaleString()}</p>
           </div>
           <div class="col-5">
-            <textarea onblur="app.NotesController.saveNotes('${this.Id}')" name="body" id="note-content" cols="90" rows="30" >${this.body}</textarea>
+            <textarea onblur="app.NotesController.saveNotes('${this.Id}')" name="body" id="note-content" cols="90" rows="30" class="m-2" >${this.body}</textarea>
           </div>
-          <div class="col-2">
-            <button onclick="app.NotesController.removeNotes('${this.Id}')" class="btn btn-danger rounded btn-margin"><i class="mdi mdi-delete"></i></button
+          <div class="col-2 justify-content-end">
+            <button onclick="app.NotesController.removeNotes('${this.Id}')" class="btn btn-danger rounded btn-margin "><i class="mdi mdi-delete"></i></button
           </div>
         </section>
       </div>
